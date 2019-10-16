@@ -1,0 +1,159 @@
+// Please use event listeners to run functions.
+document.addEventListener('onLoad', function(obj) {
+	// obj will be empty for chat widget
+	// this will fire only once when the widget loads
+});
+let emoticons = [];
+document.addEventListener('onEventReceived', function(obj) {
+  let data = obj.detail;
+    let message = data.body;
+    let words = message.split(" ");
+    let results = words.filter(value => -1 !== emoticons.indexOf(value.toLowerCase()));
+  	const listener = words[0];
+    const event = obj.detail.event;
+  	var command = words[0];
+    let avatar = data.payload.user_avatar;
+  	
+  $(".user_pic").attr('src', avatar);
+    var userlvl = obj.detail.userType;
+  	if (userlvl === 'user') {
+      var soname = words[0];
+      var lurk = obj.detail.from;
+      var shoutlout = words[1]
+      results = Array.from(new Set(results)); //getting unique words
+      playVid(soname, lurk, shoutlout);
+    } 
+	console.log(obj);
+  var chatLines = $("#log .chatMsg").length;
+  var chatSize = {chatSize};
+  if(chatLines > chatSize){
+    $("#log .chatMsg").first().remove();
+  }
+});
+
+let cooldown = 0;
+
+const videosData = {
+    "!{eventtrigger1}": {
+        "video": "{event1video}",
+      	"maintext": "",
+        "subtext": ""
+    },
+    "!{eventtrigger2}": {
+        "video": "{event2video}",
+      	"maintext": "",
+        "subtext": ""
+    },
+  	"!{eventtrigger3}": {
+        "video": "{event3video}",
+      	"maintext": "",
+        "subtext": ""
+    },
+  	"!{eventtrigger4}": {
+        "video": "{event4video}",
+      "subtext": "Dat Lurk doe!"
+    },
+  	"!{eventtrigger5}": {
+        "video": "{event5video}",
+      	"maintext": "",
+        "subtext": ""
+    },
+  	"!{eventtrigger6}": {
+        "video": "{event6video}",
+      	"maintext": "",
+        "subtext": ""
+    },
+    "!{eventtrigger7}": {
+        "video": "{event7video}",
+      	"maintext": "",
+        "subtext": ""
+    },
+    "!{eventtrigger8}": {
+        "video": "{event8video}",
+      	"maintext": "",
+        "subtext": ""
+    },
+  "!{eventtrigger9}": {
+        "video": "{event9video}",
+      	"maintext": "",
+        "subtext": ""
+    },
+  "!{eventtrigger10}": {
+        "video": "{event10video}",
+      	"maintext": "",
+        "subtext": ""
+    },
+  "!so": {
+        "video": "https://cdn.streamlabs.com/users/8773167/library/videoplayback-3ZD.webm",
+    	"maintext": "Go Checkout",
+  }
+  };
+
+function playVid(soname, lurk, shoutout) {
+    const name = soname.toLowerCase();
+    let playv = false;
+
+    console.log('before');
+
+    if (!(name in videosData)) {
+		return;
+    }
+
+    let userVid = videosData[name];
+	let mainText = lurk;
+	let subText = 'Mixer.com/'+shoutout;
+	
+    if("maintext" in userVid){
+        mainText = userVid["maintext"];
+    }
+	
+	if("subtext" in userVid){
+        subText = userVid["subtext"];
+    }
+
+    document.querySelector("video").setAttribute("src", userVid["video"]);
+
+	setTexts(mainText, subText);
+	
+	var vid = document.getElementById("vid");
+	var goalAudio = document.getElementById("goalAudio");
+	var soundVolume = {eventSound};
+	vid.volume = soundVolume * .01;
+	vid.play();
+	$("#vid").fadeIn("slow");
+
+	$('#vid').on('ended', function () {
+	
+		$("#vid").hide();
+	});
+
+}
+
+function setTexts(mtext, sText) {
+    const animation = 'wobble';
+
+    let shoutout = document.createElement('div');
+    shoutout.setAttribute("id", "mainText");
+    
+    let stname = document.createElement('div');
+    stname.setAttribute("id", "subText");
+
+    shoutout.innerHTML = stringToAnimatedHTML(mtext, animation);
+    stname.innerHTML = stringToAnimatedHTML(sText, animation);
+
+	document.querySelector("#containerMain").innerHTML = "";
+    document.querySelector("#containerSub").innerHTML = "";
+
+    document.querySelector("#containerMain").appendChild(shoutout);
+    document.querySelector("#containerSub").appendChild(stname);
+}
+
+
+function stringToAnimatedHTML(s, anim) {
+    let stringAsArray = s.split('');
+    stringAsArray = stringAsArray.map((letter) => {
+        return `<span class="animated-letter ${anim}">${letter}</span>`
+    });
+    return stringAsArray.join('');
+  
+};

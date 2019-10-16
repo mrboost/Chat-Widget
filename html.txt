@@ -1,0 +1,30 @@
+<!-- item will be appened to this layout -->
+<div id="log" class="sl__chat__layout">
+</div>
+<div id="placeholder"></div>
+<div id="box"></div>
+<center>
+<div id="containerMain"></div>
+</center>
+<div id="video">
+    <video id="vid" width="100%" height="50%" preload="none">
+        <source src="" type="video/webm">
+    </video>
+</div>
+<center>
+<div id="containerSub"></div>
+</center>
+<!-- chat item -->
+<script type="text/template" id="chatlist_item">
+  <div data-from="{from}" data-id="{messageId}">
+    <span class="meta" style="color: {color}">
+      <span class="badges">
+      </span>
+      <span class="name">{from}</span>
+    </span>
+
+    <span class="message">
+      {message}
+    </span>
+  </div>
+</script>

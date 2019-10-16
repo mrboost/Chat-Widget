@@ -1,0 +1,111 @@
+{
+    "eventSound": {
+        "label": "Event Trigger Volume (%)",
+        "max": 100,
+        "min": 0,
+        "name": "",
+        "steps": 1,
+        "type": "slider",
+        "value": 75
+    },
+    "eventtrigger1": {
+        "label": "Event 1 Trigger",
+        "type": "textfield",
+        "value": "woo"
+    },
+    "event1video": {
+        "label": "Event Video",
+        "type": "image-input",
+        "value": "https://cdn.streamlabs.com/users/8773167/library/Ric%20Flair%20Jet%20Flyin%27.webm"
+    },
+    "eventtrigger2": {
+        "label": "Event 1 Trigger",
+        "type": "textfield",
+        "value": "yeet"
+    },
+    "event2video": {
+        "label": "Event Video",
+        "type": "image-input",
+        "value": "https://cdn.streamlabs.com/users/8773167/library/Lion%20king%20YEET_1-8zh.webm"
+    },
+    "eventtrigger3": {
+        "label": "Event 1 Trigger",
+        "type": "textfield",
+        "value": "sendit"
+    },
+    "event3video": {
+        "label": "Event Video",
+        "type": "image-input",
+        "value": "https://cdn.streamlabs.com/users/8773167/library/Larry%20Enticer%20-%20Just%20Gonna%20Send%20It%20-%20The%20Best%20Of-ePA.webm"
+    },
+    "eventtrigger4": {
+        "label": "Event 1 Trigger",
+        "type": "textfield",
+        "value": "lurk"
+    },
+    "event4video": {
+        "label": "Event Video",
+        "type": "image-input",
+        "value": "https://cdn.streamlabs.com/users/8773167/library/videoplayback-wRE.webm"
+    },
+    "eventtrigger5": {
+        "label": "Event 1 Trigger",
+        "type": "textfield",
+        "value": "fraud"
+    },
+    "event5video": {
+        "label": "Event Video",
+        "type": "image-input",
+        "value": "https://cdn.streamlabs.com/users/8773167/library/videoplayback-AL9.webm"
+    },
+    "eventtrigger6": {
+        "label": "Event 1 Trigger",
+        "type": "textfield",
+        "value": "danger"
+    },
+    "event6video": {
+        "label": "Event Video",
+        "type": "image-input",
+        "value": "https://cdn.streamlabs.com/users/8773167/library/videoplayback%20%281%29%20%28online-video-cutter.com%29-Pgz.webm"
+    },
+    "eventtrigger7": {
+        "label": "Event 1 Trigger",
+        "type": "textfield",
+        "value": "champ"
+    },
+    "event7video": {
+        "label": "Event Video",
+        "type": "image-input",
+        "value": "https://cdn.streamlabs.com/users/8773167/library/the%20champ-QIa.webm"
+    },
+    "eventtrigger8": {
+        "label": "Event 1 Trigger",
+        "type": "textfield",
+        "value": "boiling"
+    },
+    "event8video": {
+        "label": "Event Video",
+        "type": "image-input",
+        "value": "https://cdn.streamlabs.com/users/8773167/library/boilingpoint-Lgi.webm"
+    },
+    "eventtrigger9": {
+        "label": "Event 1 Trigger",
+        "type": "textfield",
+        "value": "cream"
+    },
+    "event9video": {
+        "label": "Event Video",
+        "type": "image-input",
+        "value": "https://cdn.streamlabs.com/users/8773167/library/macho%20man%202-vI4.webm"
+    },
+    "eventtrigger10": {
+        "label": "Event 1 Trigger",
+        "type": "textfield",
+        "value": "dead"
+    },
+    "event10video": {
+        "label": "Event Video",
+        "type": "image-input",
+        "value": "https://cdn.streamlabs.com/users/8773167/library/f225c184-8fc8-4c32-bcd3-f3d07a50e9fe-tSo.webm"
+    }
+}
