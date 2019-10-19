@@ -101,7 +101,7 @@ function playVid(soname, lurk, shoutout) {
 
     let userVid = videosData[name];
 	let mainText = lurk;
-	let subText = 'Mixer.com/'+shoutout;
+	let subText = 'twitch.com/'+shoutout;
 	
     if("maintext" in userVid){
         mainText = userVid["maintext"];
