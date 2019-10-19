@@ -16,7 +16,7 @@ document.addEventListener('onEventReceived', function(obj) {
   	
   $(".user_pic").attr('src', avatar);
     var userlvl = obj.detail.userType;
-  	if (userlvl === 'user') {
+  	if (userlvl === 'user' || userlvl === 'mod') {
       var soname = words[0];
       var lurk = obj.detail.from;
       var shoutlout = words[1]
